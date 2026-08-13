@@ -1,6 +1,7 @@
 
 
-```markdown
+
+
 # 🤖 CAPSTONE AI PIPELINE
 
 A full-stack Conversational AI application that integrates **FastAPI**, **JWT authentication**, **LlamaIndex retrieval**, and a modern **HTML/CSS/JS frontend**. The system provides secure login, analytics dashboards, query caching, and real-time AI responses powered by Hugging Face endpoints.
@@ -66,7 +67,7 @@ graph TD
 
 ### 1. Repository Setup
 ```bash
-git clone <your-repository-url>
+git clone <repository-url>
 cd CAPSTONE
 ```
 
@@ -100,6 +101,19 @@ http://localhost:8000
 ```
 
 ---
+🖼️ Demo Screenshots
+Here are sample screenshots from the /output folder:
+
+![Login & Dashboard](output\ScreenShot_1.png)
+
+![Query Submission](output\ScreenShot_2.png)
+
+![History API Response](output\ScreenShot_4_HistoryAPIResponse.png)
+
+![Health Check API Response](output\ScreenShot_5_HealthCheckAPIResponse.png)
+
+
+---
 
 ## 📈 Development Roadmap & Git History
 
@@ -124,7 +138,5 @@ timeline
 ## 🤝 Contributing
 Pull requests are welcome! For major changes, please open an issue first to discuss what you’d like to change.
 
-🔗 Repository  
-`https://github.com/Vedantjaiswal4352/CAPSTONE` [(github.com in Bing)](https://www.bing.com/search?q="https%3A%2F%2Fgithub.com%2FVedantjaiswal4352%2FCAPSTONE")
-```
+## 🔗 [CAPSTONE Repository](https://github.com/Vedantjaiswal4352/CAPSTONE)
 
