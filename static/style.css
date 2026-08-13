@@ -1,0 +1,515 @@
+/* ===========================
+   RESET
+=========================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: #0f172a;
+    color: #f8fafc;
+    overflow-x: hidden;
+}
+
+/* ===========================
+   BACKGROUND
+=========================== */
+
+.background {
+    position: fixed;
+    inset: 0;
+    background:
+        radial-gradient(circle at top left,#2563eb 0%,transparent 35%),
+        radial-gradient(circle at bottom right,#7c3aed 0%,transparent 30%),
+        #0f172a;
+    z-index: -1;
+}
+
+/* ===========================
+   HEADER
+=========================== */
+
+header {
+    height: 70px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 0 40px;
+
+    background: rgba(255,255,255,.05);
+
+    backdrop-filter: blur(12px);
+
+    border-bottom: 1px solid rgba(255,255,255,.08);
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.api-status {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.status-dot {
+    width: 12px;
+    height: 12px;
+
+    background: #22c55e;
+
+    border-radius: 50%;
+
+    box-shadow: 0 0 15px #22c55e;
+}
+
+/* ===========================
+   LAYOUT
+=========================== */
+
+.container {
+
+    display: grid;
+
+    grid-template-columns:
+        320px
+        1fr
+        330px;
+
+    gap: 25px;
+
+    padding: 30px;
+
+}
+
+/* ===========================
+   CARDS
+=========================== */
+
+.card {
+
+    background: rgba(255,255,255,.06);
+
+    backdrop-filter: blur(14px);
+
+    border-radius: 18px;
+
+    padding: 22px;
+
+    margin-bottom: 25px;
+
+    border: 1px solid rgba(255,255,255,.08);
+
+    box-shadow:
+        0 10px 25px rgba(0,0,0,.25);
+}
+
+.card h2{
+
+    margin-bottom:20px;
+
+    font-size:22px;
+}
+
+/* ===========================
+   INPUTS
+=========================== */
+
+input,
+textarea{
+
+    width:100%;
+
+    padding:14px;
+
+    margin-bottom:15px;
+
+    border:none;
+
+    outline:none;
+
+    border-radius:10px;
+
+    background:#1e293b;
+
+    color:white;
+
+    font-size:15px;
+}
+
+textarea{
+
+    resize:vertical;
+}
+
+/* ===========================
+   BUTTONS
+=========================== */
+
+button{
+
+    width:100%;
+
+    padding:14px;
+
+    margin-top:8px;
+
+    border:none;
+
+    border-radius:10px;
+
+    cursor:pointer;
+
+    font-size:15px;
+
+    font-weight:600;
+
+    color:white;
+
+    background:linear-gradient(90deg,#2563eb,#7c3aed);
+
+    transition:.3s;
+}
+
+button:hover{
+
+    transform:translateY(-2px);
+
+    box-shadow:0 6px 20px rgba(37,99,235,.45);
+}
+
+.button-row{
+
+    display:flex;
+
+    gap:10px;
+
+    margin-top:10px;
+}
+
+.button-row button{
+
+    flex:1;
+}
+
+/* ===========================
+   LOGIN STATUS
+=========================== */
+
+.login-status{
+
+    margin-top:18px;
+
+    text-align:center;
+
+    color:#94a3b8;
+
+    font-size:14px;
+}
+
+/* ===========================
+   ANSWER BOX
+=========================== */
+
+#answerContainer{
+
+    min-height: 100px;
+    max-height: 300px;
+    overflow-y: auto;
+
+    padding:20px;
+
+    border-radius:12px;
+
+    background:#111827;
+
+    border:1px solid rgba(255,255,255,.08);
+
+    overflow:auto;
+
+    white-space:pre-wrap;
+
+    line-height:1.8;
+}
+
+.placeholder{
+
+    color:#94a3b8;
+}
+
+/* ===========================
+   TABLE
+=========================== */
+
+table{
+
+    width:100%;
+
+    border-collapse:collapse;
+}
+
+td{
+
+    padding:14px 6px;
+
+    border-bottom:1px solid rgba(255,255,255,.08);
+}
+
+td:first-child{
+
+    color:#94a3b8;
+}
+
+td:last-child{
+
+    text-align:right;
+
+    font-weight:bold;
+}
+
+/* ===========================
+   JSON RESPONSE
+=========================== */
+
+#jsonResponse{
+
+    background:#111827;
+
+    padding:15px;
+
+    border-radius:10px;
+
+    max-height:420px;
+
+    overflow:auto;
+
+    color:#38bdf8;
+
+    font-size:13px;
+
+    white-space:pre-wrap;
+}
+
+/* ===========================
+   FOOTER
+=========================== */
+
+footer{
+
+    padding:20px 30px 40px;
+}
+
+.footer-card{
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:20px;
+}
+
+.footer-item{
+
+    background:rgba(255,255,255,.05);
+
+    padding:25px;
+
+    border-radius:16px;
+
+    text-align:center;
+
+    border:1px solid rgba(255,255,255,.08);
+}
+
+.footer-item h3{
+
+    margin-bottom:10px;
+
+    color:#94a3b8;
+
+    font-size:16px;
+}
+
+.footer-item span{
+
+    font-size:22px;
+
+    font-weight:bold;
+}
+
+/* ===========================
+   LOADING
+=========================== */
+
+#loadingOverlay{
+
+    position:fixed;
+
+    inset:0;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:rgba(0,0,0,.65);
+
+    backdrop-filter:blur(5px);
+
+    z-index:9999;
+}
+
+.hidden{
+
+    display:none !important;
+}
+
+.loader{
+
+    width:65px;
+
+    height:65px;
+
+    border:6px solid rgba(255,255,255,.15);
+
+    border-top:6px solid #3b82f6;
+
+    border-radius:50%;
+
+    animation:spin 1s linear infinite;
+
+    margin-bottom:20px;
+}
+
+@keyframes spin{
+
+    to{
+
+        transform:rotate(360deg);
+    }
+}
+
+/* ===========================
+   TOAST
+=========================== */
+
+#toast{
+
+    position:fixed;
+
+    bottom:30px;
+
+    right:30px;
+
+    padding:15px 25px;
+
+    background:#2563eb;
+
+    color:white;
+
+    border-radius:12px;
+
+    opacity:0;
+
+    transition:.4s;
+
+    pointer-events:none;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.3);
+}
+
+#toast.show{
+
+    opacity:1;
+}
+
+/* ===========================
+   SCROLLBAR
+=========================== */
+
+::-webkit-scrollbar{
+
+    width:10px;
+}
+
+::-webkit-scrollbar-track{
+
+    background:#111827;
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:#334155;
+
+    border-radius:20px;
+}
+
+::-webkit-scrollbar-thumb:hover{
+
+    background:#475569;
+}
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+
+@media(max-width:1200px){
+
+.container{
+
+    grid-template-columns:1fr;
+}
+
+.sidebar,
+.right-panel{
+
+    width:100%;
+}
+
+.footer-card{
+
+    grid-template-columns:repeat(2,1fr);
+}
+
+}
+
+@media(max-width:700px){
+
+header{
+
+    flex-direction:column;
+
+    height:auto;
+
+    padding:20px;
+}
+
+.logo{
+
+    font-size:24px;
+
+    margin-bottom:10px;
+}
+
+.footer-card{
+
+    grid-template-columns:1fr;
+}
+
+.container{
+
+    padding:15px;
+}
+
+}

@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Capstone AI Pipeline</title>
+
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+
+<div class="background"></div>
+
+<header>
+
+    <div class="logo">
+        🤖 Capstone AI Pipeline
+    </div>
+
+    <div class="api-status">
+        <span class="status-dot"></span>
+        API Online
+    </div>
+
+</header>
+
+<div class="container">
+
+    <!-- LEFT PANEL -->
+
+    <aside class="sidebar">
+
+        <div class="card">
+
+            <h2>🔐 Authentication</h2>
+
+            <input
+                type="text"
+                id="username"
+                placeholder="Username">
+
+            <input
+                type="password"
+                id="password"
+                placeholder="Password">
+
+            <button id="loginBtn">
+                Login
+            </button>
+
+            <div class="login-status" id="loginStatus">
+                Not Logged In
+            </div>
+
+        </div>
+
+        <div class="card">
+
+            <h2>🔑 JWT Token</h2>
+
+            <textarea
+                id="tokenBox"
+                readonly
+                placeholder="Login to generate token"></textarea>
+
+            <div class="button-row">
+
+                <button id="showTokenBtn">
+                    Show
+                </button>
+
+                <button id="copyTokenBtn">
+                    Copy
+                </button>
+
+                <button id="clearTokenBtn">
+                    Clear
+                </button>
+
+            </div>
+
+        </div>
+
+        <div class="card">
+
+            <h2>⚡ Quick Actions</h2>
+
+            <button id="healthBtn">
+                Health Check
+            </button>
+
+            <button id="dashboardBtn">
+                Dashboard
+            </button>
+
+            <button id="historyBtn">
+                History
+            </button>
+
+        </div>
+
+    </aside>
+
+
+
+    <!-- MAIN -->
+
+    <main class="main-content">
+
+        <div class="card">
+
+            <h2>💬 Ask AI</h2>
+
+            <textarea
+                id="question"
+                rows="5"
+                placeholder="Ask anything about your knowledge base..."></textarea>
+
+            <button id="askBtn">
+                Ask Question
+            </button>
+
+        </div>
+
+        <div class="card">
+
+            <h2>🤖 AI Response</h2>
+
+            <div id="answerContainer">
+
+                <div class="placeholder">
+                    Your AI response will appear here.
+                </div>
+
+            </div>
+
+        </div>
+
+    </main>
+
+
+
+    <!-- RIGHT PANEL -->
+
+    <aside class="right-panel">
+
+        <div class="card">
+
+            <h2>📊 Request Information</h2>
+
+            <table>
+
+                <tr>
+                    <td>Response Time</td>
+                    <td id="responseTime">--</td>
+                </tr>
+
+                <tr>
+                    <td>Cached</td>
+                    <td id="cachedValue">--</td>
+                </tr>
+
+                <tr>
+                    <td>User</td>
+                    <td id="currentUser">--</td>
+                </tr>
+
+            </table>
+
+        </div>
+
+        <div class="card">
+
+            <h2>📜 API Response</h2>
+
+            <pre id="jsonResponse">
+
+No API response yet.
+
+            </pre>
+
+        </div>
+
+    </aside>
+
+</div>
+
+
+
+<footer>
+
+    <div class="footer-card">
+
+        <div class="footer-item">
+            <h3>Total Endpoints</h3>
+            <span>5</span>
+        </div>
+
+        <div class="footer-item">
+            <h3>Authentication</h3>
+            <span>JWT</span>
+        </div>
+
+        <div class="footer-item">
+            <h3>Framework</h3>
+            <span>FastAPI</span>
+        </div>
+
+        <div class="footer-item">
+            <h3>Backend</h3>
+            <span>Python</span>
+        </div>
+
+    </div>
+
+</footer>
+
+
+
+<!-- Loading Spinner -->
+
+<div id="loadingOverlay" class="hidden">
+
+    <div class="loader"></div>
+
+    <p>Processing Request...</p>
+
+</div>
+
+
+
+<!-- Toast -->
+
+<div id="toast"></div>
+
+
+
+<script src="/static/script.js"></script>
+
+</body>
+</html>

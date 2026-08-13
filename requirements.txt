@@ -1,0 +1,10 @@
+fastapi
+uvicorn
+python-jose
+llama-index
+llama-index-core
+llama-index-llms-openai
+llama-index-embeddings-openai
+openai
+pandas
+dotenv
