@@ -104,13 +104,16 @@ http://localhost:8000
 🖼️ Demo Screenshots
 Here are sample screenshots from the /output folder:
 
-![Login & Dashboard](output\ScreenShot_1.png)
+<img width="1920" height="919" alt="ScreenShot_1" src="https://github.com/user-attachments/assets/7491b707-3f0b-4238-a018-0ca520e2a597" />
 
-![Query Submission](output\ScreenShot_2.png)
+<img width="1920" height="919" alt="ScreenShot_2" src="https://github.com/user-attachments/assets/86b851d0-5115-45cc-8fe9-c9a58530c893" />
 
-![History API Response](output\ScreenShot_4_HistoryAPIResponse.png)
 
-![Health Check API Response](output\ScreenShot_5_HealthCheckAPIResponse.png)
+<img width="439" height="674" alt="ScreenShot_4_HistoryAPIResponse" src="https://github.com/user-attachments/assets/91e3e979-4b44-40bf-b6ee-87f71092e1ec" />
+
+
+<img width="1920" height="919" alt="ScreenShot_5_HealthCheckAPIResponse" src="https://github.com/user-attachments/assets/fe3ed562-1d51-46fd-bd85-1b0a0a290068" />
+
 
 
 ---
